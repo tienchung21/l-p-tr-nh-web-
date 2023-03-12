@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../JS/jquery-3.6.1.min.js"></script>
+    <script src="../JS/bootstrap.js"></script>
+    <script src="../JS/bootstrap.min.js"></script>
+    <title>Document</title>
+
+    <style>
+        .form-row{
+            display: flex;
+            align-items: center;
+            margin: 10px;
+            border-bottom: 1px solid gainsboro;
+            padding-bottom: 10px;
+        }
+
+        label{
+            width: 160px;
+        }
+
+        input{
+            width: 200px;
+            padding: 5px;
+        }
+    </style>
+
+    
+</head>
+<body style="font-size: 30px;">
+    <script>
+        function kiemTraTenDN(){
+            let tenDN = document.getElementById("txtTenDN").value;
+            let regexTenDN = /^\w$/i
+            if(tenDN.trim() == ""){
+                document.getElementById("tbTenDN").innerHTML = "User should be type"
+                return false
+            }
+
+            if(!regexTenDN.test(tenDN)){
+                document.getElementById("tbTenDN").innerHTML = "User should be type is chart, number and _"
+                return false
+            } 
+
+            document.getElementById("tbTenDN").innerHTML="*"
+            return true;
+        }
+
+        function kiemTraMK(){
+            let matkhau = document.getElementById("txtMK").value;
+            let regexMK = /^[a-z\d]{6,}$/i
+            if(matkhau.trim() == ""){
+                document.getElementById("tbMK").innerHTML = "Password should be type"
+                return false
+            }
+
+            if(!regexMK.test(matkhau)){
+                document.getElementById("tbMK").innerHTML = "Password should be type is chart, number have lenght is 6"
+                return false
+            } 
+
+            document.getElementById("tbMK").innerHTML="*"
+            return true;
+    }
+
+        function valid(){
+            let matkhau = document.getElementById("txtMK").value;
+            let matkhauNL = document.getElementById("txtNLMK").value;
+
+            if(!kiemTraTenDN() || !kiemTraMK())                                                                                    
+                    return false
+
+                if(matkhauNL != matkhau){
+                    document.getElementById("tbMK").innerHTML="Your password type should be likely currently password"
+                    return false;
+            }
+
+            document.getElementById("tbMK").innerHTML="*"
+            return true;
+        }
+    </script>
+
+
+    <h1> SIGN UP USER </h1>
+    <form action="">
+        <div class="form-row">
+            <label for="txtTenDN">Tên đăng nhập: </label>
+            <!--Lưu ý bắt buộc nhập thẻ input nên có required -->
+            <input type="text" name="" id="txtTenDN" required placeholder="Nhập vào tên đăng nhập">
+            
+            <span id="tbTenDN" style="color: red; font-size: 0.75em;">*</span>
+        </div>
+
+        <div class="form-row">
+            <label for="txtMK">Mật khẩu: </label>
+            <input type="password" name="" id="txtMK" required placeholder="Nhập vào mật khẩu">
+            <span id="tbMK" style="color: red; font-size: 0.75em;">*</span>
+        </div>
+
+        <div class="form-row">
+            <label for="txtNLMK">Nhập lại mật khẩu: </label>
+            <input type="password" name="" id="txtNLMK" required placeholder="Nhập lại mật khẩu">
+            <span id="tbNLMK" style="color: red; font-size: 0.75em;">*</span>
+        </div>
+
+        <div class="form-row">
+            <button type="button" onclick="valid()">Đăng ký</button>
+            <button type="reset">Hủy</button>
+        </div>
+    </form>
+
+</body>
+</html>

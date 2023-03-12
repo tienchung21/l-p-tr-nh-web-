@@ -1,0 +1,26 @@
+.menu{
+    width: 194px;
+    height: 262px;
+    box-shadow: 0 0 0 4px #a2b8c4, 2px 1px 6px 4px rgb(10 10 0 / 50%);
+    padding: 1px;
+}
+
+li{
+    width: 100px;
+    margin: 0px;
+    padding: 15px;
+    color: #ffffff;
+    background: #0d90df;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.3em;
+    border: 2px dashed #ffffff;
+    border-radius: 10px;
+    margin-left: 30px;
+    box-shadow: 0 0 0 4px #0d90df, 2px 1px 6px 4px rgb(10 10 0 / 50%);
+    text-shadow: -1px -1px #aa3030;
+    text-align: center;
+    list-style: none;
+
+}
+

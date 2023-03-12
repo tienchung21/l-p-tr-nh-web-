@@ -1,0 +1,47 @@
+.header{
+    color: #e2f7f6;
+    background-image: url(../IMAGES/R.jpg);
+    text-align: center;
+
+}
+.headerh1{
+    font-weight: 10;
+    font-size: 50px;
+}
+.headerh2{
+    font-weight: 8;
+    font-size: 30px;
+    font-style: italic;
+    text-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+.wrapper{
+    width: 85%;
+    border: 1px solid;
+    margin: auto;
+    height: 80vh;
+    
+    
+}
+.view{
+    background: rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur(8px); 
+    height: 6vh;
+    width: 100%;
+    line-height: 50px;
+    position: relative;
+}
+.arrow{
+    position: absolute;
+    font-size: 60px;
+    line-height: 50px;
+    bottom: 0;
+    right: 400px;
+   
+}
+.body1{
+    text-align: center;
+}
+.body2{
+    width: 70%;
+    margin: auto;
+}

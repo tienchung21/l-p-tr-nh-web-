@@ -1,0 +1,43 @@
+.wrapper{
+    width: 989px;
+    height: 700px;
+    box-sizing: border-box;
+    border: black 1px solid;
+}
+.logo{
+    float: left;
+    width: 20%;
+    height: 20%;
+    background-color: aqua;
+}
+header{
+    float: right;
+    width: 80%;
+    height: 15%;
+    background-color: antiquewhite;
+}
+nav{
+    width: 80%;
+    height: 5%;
+    float: right;
+    background-color: beige;
+}
+aside{
+ 
+    float: left;
+  
+}
+
+section{
+    width: 70%;
+    height: 50%;
+    float: right;
+    border-bottom: black 1px solid;
+    text-align: center;
+}
+footer{
+    width: 70%;
+    height: 15%;
+    float: right;
+    text-align: center;
+}

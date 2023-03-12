@@ -1,0 +1,22 @@
+header{
+    height: 20px;
+    width: auto;
+    background-color: rgb(219 133 162);
+    text-align: center;
+    border: 1px solid black;
+}
+
+section{
+    height: 300px;
+    width: auto;
+    background-color:rgb(219 133 162);
+    border: 1px solid black;
+}
+
+footer{
+    height: 20px;
+    width: auto;
+    background-color: rgb(219 133 162);
+    text-align: center;
+    border: 1px solid black;
+}

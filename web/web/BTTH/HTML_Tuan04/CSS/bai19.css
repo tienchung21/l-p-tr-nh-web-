@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.menu ul{
+    list-style: none;
+    background-color: rgb(53, 61, 62);
+    text-align: center;
+}
+
+.menu ul li{
+    display: inline-table;
+    height: 40px;
+    position: relative;
+
+    line-height: 40px;
+    width: 120px;
+}
+
+.menu ul li a{
+    text-decoration: none;
+    color: white;
+    display: block;
+    border: 0.5px solid white;
+}
+
+.menu ul li a:hover{
+    background-color: green;
+    color: white;
+}
+
+.menu ul li ul{
+    background-color: white;
+    
+}
+
+.menu ul li a{
+    color: black;
+}
+
+.sub-menu{
+    width: 200px;
+    position: absolute;
+    
+    display: none;
+    
+}
+
+.menu ul li .sub-menu li a{
+    text-align: left;
+    width: 190px;
+    background-color: rgb(222, 216, 216);
+    
+}
+
+.menu ul li .sub-menu li a:hover{
+    background-color: green;
+}
+
+.menu ul li:hover .sub-menu{
+    display: block;
+}
+

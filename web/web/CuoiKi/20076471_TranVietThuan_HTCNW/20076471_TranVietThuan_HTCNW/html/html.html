@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/css.css">
+    <script src="../js/check.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <img src="../img/banner.PNG" alt="">
+        </div>
+        <div class="row">
+            <ul class="nav">
+                <li class="nav-item"><a class="nav-link" href="#">Đăng nhập</a></li>
+                <li class="nav-item"><a  class="nav-link" href="#" id="btnModal">Đăng kí</a></li>
+            </ul>
+        </div>
+        <div class="row">
+            <h1>DANH SÁCH ĐĂNG KÝ LÀM CĂN CƯỚC SINH VIÊN <br> TRƯỜNG DHCN THÀNH PHỐ HỒ CHÍ MINH</h1>
+        </div>
+        <table class="table">
+            <thead>
+                <th scope="col">STT</th>
+                <th scope="col">Họ tên</th>
+                <th scope="col">SCMND cũ</th>
+                <th scope="col">Quê quán</th>
+                <th scope="col">Email</th>
+                <th scope="col">Điện thoại</th>
+                <th scope="col">Ảnh đại diện</th>
+            </thead>
+            <tbody>
+                <th scope="col">1</th>
+                <th scope="col">Nguyễn Công Chinh</th>
+                <th scope="col">212692772</th>
+                <th scope="col">BÌNH ĐỊNH</th>
+                <th scope="col">duonghoainam@gmail.com</th>
+                <th scope="col">0989-888-777</th>
+                <th scope="col">AnhMoi</th>
+            </tbody>
+        </table>
+        <div class="row">
+            <p><td colspan="7">SVTH:.....Mã sinh viên:............. Lớp:.....</td></p>
+        </div>
+
+        <div class="row">
+            <div class="modal fade" id="myModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2>THÔNG TIN CÁ NHÂN</h2>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form">
+                                    
+                                <div class="row">
+                                    <div class="col-4 col-sm-5">
+                                        <label for="lblTen">Họ tên</label>
+                                    </div>
+                                    <div class="col-4 col-sm-7">
+                                        <input type="text" name="txtTen" id="txtTen" class="form-control" placeholder="Nhập họ tên">
+                                        <span class="text-danger" id="tbTen">*</span>
+                                    </div>
+                                </div><br>
+            
+                                <div class="row">
+                                    <div class="col-4 col-sm-5">
+                                        <label for="lblCMND">SCMND cũ</label>
+                                    </div>
+                                    <div class="col-4 col-sm-7">
+                                        <input type="text" name="txtCMND" id="txtCMND" class="form-control" placeholder="Nhập SCMND cũ">
+                                        <span class="text-danger" id="tbCMND">*</span>
+                                    </div>
+                                </div><br>
+                
+                                <div class="row">
+                                    <div class="col-4 col-sm-5">
+                                        <label for="lblQQ">Quê quán</label>
+                                    </div>
+                                    <div class="col-4 col-sm-7">
+                                        <input type="text" name="txtQQ" id="txtQQ" class="form-control" placeholder="Nhập tỉnh của bạn">
+                                        <span class="text-danger" id="tbQQ">*</span>
+                                    </div>
+                                </div><br>
+                                <div class="row">
+                                    <div class="col-4 col-sm-5">
+                                        <label for="lblEmail">Email</label>
+                                    </div>
+                                    <div class="col-4 col-sm-7">
+                                        <input type="text" name="txtEmail" id="txtEmail" class="form-control" placeholder="Nhập Email của bạn">
+                                        <span class="text-danger" id="tbEmail">*</span>
+                                    </div>
+                                </div><br>
+                                <div class="row">
+                                    <div class="col-4 col-sm-5">
+                                        <label for="lblSDT">Số điện thoại</label>
+                                    </div>
+                                    <div class="col-4 col-sm-7">
+                                        <input type="text" name="txtSDT" id="txtSDT" class="form-control" placeholder="xxxx-xxx-xxx">
+                                        <span class="text-danger" id="tbSDT">*</span>
+                                    </div>
+                                </div><br>
+                                <div class="row">
+                                    <div class="col-4 col-sm-5">
+                                        <label for="lblAnhDD">Ảnh đại diện</label>
+                                    </div>
+                                    <div class="col-4 col-sm-7">
+                                        <input type="file" name="txtAnhDD" id="txtAnhDD" class="form-control">
+                                        <span class="text-danger" id="tbAnhDD">*</span>
+                                    </div>
+                                </div><br>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <input type="submit" value="Lưu" id="btnSave" class="btn-success" style="width:100%">
+                                        <br>
+                                        <span class="text-danger" id="thongbao"></span>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

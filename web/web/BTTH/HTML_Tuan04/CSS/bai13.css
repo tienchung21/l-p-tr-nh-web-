@@ -1,0 +1,27 @@
+.div{
+    width: 1080px;
+    height: 340px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+li{
+    border: 2px solid blue;
+}
+
+
+img{
+    background-color: aqua;
+    transition: width 2s, height 4s;
+    width: 150px;
+    height: 150px;
+    margin-top: 50px;
+    margin-left: 32px;
+}
+
+img:hover{
+    width: 200px;
+    height: 200px;
+}

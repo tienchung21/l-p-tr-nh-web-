@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/bai17.css">
+    <link rel="stylesheet" href="../CSS/bootstrap.min.css">
+    <script src="../js/jquery-3.6.1.min.js"> </script>
+    <script>
+        $(document).ready(
+            function() {
+            $(".usertxt").blur(function(){
+                var reg=/^[0-9]{9}$/;
+                if($(".usertxt").val()=="")
+                    alert("Username khong duoc rong");
+                else    
+                if(reg.test($(".usertxt").val())==false)
+                {
+                    alert("sai dinh dag")
+
+                }
+                else
+                alert("OK");
+            })
+        })
+        $(document).ready(
+            function() {
+            $(".password").blur(function(){
+                var reg=/^[0-9 a-z A-Z (!@#$%^&*.,]{6}$/;
+                if($(".password").val()=="")
+                    alert("password khong duoc rong");
+                else    
+                if(reg.test($(".password").val())==false)
+                {
+                    alert("sai dinh dag")
+
+                }
+                else
+                alert("OK");
+            })
+        })
+        $(document).ready(
+            function() {
+            $(".Name").blur(function(){
+                var reg= /^[a-zA-Z0-9_-]{3,16}$/;
+                if($(".Name").val()=="")
+                    alert("Ten khong duoc rong");
+                else    
+                if(reg.test($(".Name").val())==false)
+                {
+                    alert("sai dinh dag")
+
+                }
+                else
+                alert("OK");
+            })
+        })
+        $(document).ready(
+            function() {
+            $(".FirstName").blur(function(){
+                var reg= /^[a-zA-Z0-9_-]{3,16}$/;
+                if($(".FirstName").val()=="")
+                    alert("Ten khong duoc rong");
+                else    
+                if(reg.test($(".FirstName").val())==false)
+                {
+                    alert("sai dinh dag")
+
+                }
+                else
+                alert("OK");
+            })
+        })
+        $(document).ready(
+            function() {
+            $(".email").blur(function(){
+                var reg=  /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+                if($(".email").val()=="")
+                    alert("Email khong duoc rong");
+                else    
+                if(reg.test($(".email").val())==false)
+                {
+                    alert("sai dinh dag")
+
+                }
+                else
+                alert("OK");
+            })
+        })
+        
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+
+        <div class="header">
+            <div class="logo">
+                <h1>facebook</h1>
+            </div>
+            
+                <form class="user" action="sign">
+                    <div>email hoac dien thoai</div>
+                    <input class="usertxt"type="text"> <br>
+                    <input type="checkbox"> duy tri dang nhap
+                </form>
+                <form action="pass" class="pass">
+                    <div>mat khau</div>
+                    <input class="password" type="text"> <br>
+                    <input type="checkbox" value="check"> queen mat khau 
+                </form>
+                <button class="signin">dang nhap</button>
+                
+                </div>
+                <div class="main">
+                    <div class="aside">
+                        <img src="../IMAGES/J.png" alt="">
+                        <h1>Cảm ơn bạn  <br> đã ghé thăm!</h1>
+                        <p>chúng tôi mong sớm gặp lại bạn<nav></nav></p>
+                        
+                    </div>
+                    <div class="section">
+                        <h2>Dang ky</h2>
+                        <div class="p"><p>Miễn phí và sẽ luôn như vậy</p></div> 
+                        <form action="">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <input class="FirstName"type="text" placeholder="Họ">
+                            </div>
+                            <div class="col-md-6">
+                                <input class="Name"type="text" placeholder="Tên">
+                            </div>
+                        </div>
+                        </form>
+                        <input type="text" class="info email" placeholder="email đăng nhập"> <br>
+                        <input type="text" class="info remail" placeholder="Nhập lại email"> <br>
+                        <input type="text" class="info password" placeholder="mật khẩu"> <br>
+                        <input type="text" class="info birthday" placeholder="Năm sinh"> <br>
+                        <button class="dangky">Đăng ký</button>
+                    </div>
+        </div>
+        </div>
+    </div>
+    
+</body>
+</html>

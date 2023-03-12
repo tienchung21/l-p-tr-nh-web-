@@ -1,0 +1,58 @@
+*{
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+.row{
+    margin-top: 15px;
+}
+body{
+    width: 860px;
+    margin: auto;
+    border: 1px solid;
+}
+.header{
+    text-align: center;
+    
+}
+#userNamelab{
+    font-size: 18px;
+    text-align: right;
+}
+#passlab{
+    font-size: 18px;
+    text-align: right;
+}
+#userName{
+    width: 80%; 
+}
+#password{
+    width: 80%; 
+}
+#passagain{
+    width: 80%;
+}
+#passagainlab{
+    font-size: 18px;
+    text-align: right;
+}
+form h3{
+    text-align: center;
+}
+form{
+    width: 100%;
+}
+.gender-wrapper{
+    display: flex;
+    
+}
+.gender{
+    margin-left: 15px;
+}
+.button{
+    margin-top :15px;
+    margin-bottom: 15px;
+}
+button{
+    background-color: black;
+    color: white;
+}

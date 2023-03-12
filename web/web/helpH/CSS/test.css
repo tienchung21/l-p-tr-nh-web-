@@ -1,0 +1,11 @@
+.background{
+    background-image: url(../IMG/Banner.png);
+    background-size: cover;
+    text-align: center;
+    color: white;
+}
+
+.container .row h2{
+    text-align: center;
+    width: 100%;
+}

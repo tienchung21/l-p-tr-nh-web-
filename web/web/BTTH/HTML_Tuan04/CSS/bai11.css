@@ -1,0 +1,14 @@
+.footer{
+    position: fixed;
+    display: block;
+    width: 700px;
+    background-color: green;
+    color: #fff;
+
+}
+
+.wrappper{
+    width: 700px;
+    height: 500px;
+    border: 1px solid black;
+}

@@ -1,0 +1,41 @@
+header{
+    height: 20px;
+    width: auto;
+    background-color: rgb(243, 243, 164);
+    border: 1px solid black;
+}
+
+
+
+.wrapper{
+    display: flex;
+    background-color: rgb(243, 243, 164);
+}
+
+nav{
+    flex-basis: 35%;
+    height: 100px;
+    width: auto;
+    border: 1px solid black;
+}
+
+section{
+
+    flex-basis: 65%;
+    height: 100px;
+    width: auto;
+    border: 1px solid black;
+}
+
+article{
+    width: auto;
+    height: 68px;
+    background-color: white;
+}
+
+footer{
+    height: 20px;
+    width: auto;
+    background-color: rgb(243, 243, 164);
+    border: 1px solid black;
+}

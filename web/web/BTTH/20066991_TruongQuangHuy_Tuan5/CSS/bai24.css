@@ -1,0 +1,53 @@
+*{
+    margin: auto;
+    padding: 0;
+}
+
+.body{
+    width: 80%;
+    height: 700px;
+    border: 10px solid rgb(33, 209, 209);
+}
+
+.head{
+    width: 75%;
+    height: 500px;
+    margin-top: 20px;
+    color: rgb(33, 209, 209);
+    
+}
+
+nav{
+    margin-top: 50px;
+}
+
+nav ul li{
+    display: inline-table;
+    margin: 20px;
+    color: rgb(33, 209, 209);
+    font-weight: bold;
+}
+
+.para1{
+    font-size: 22px;
+    font-weight: bolder;
+    text-shadow: 1px 0px #c4bdbd;
+}
+
+.para{
+    position: absolute;
+    top: 256px;
+    right: 300px;
+}
+
+img{
+    position: absolute;
+    top: 254px;
+    left: 300px;
+}
+
+.parafooter{
+    position: absolute;
+    top: 640px;
+    left: 300px;
+}

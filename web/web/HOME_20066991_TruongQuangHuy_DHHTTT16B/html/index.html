@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/css.css">
+    
+    <title>Document</title>
+    <script>
+        $(document).ready(function(){
+            var i = 1;
+
+//Họ tên không được bỏ trống, họ tên phải từ 2 từ trở lên, mỗi ký tự đầu phải viết hoa. 
+function check_hoTen(){
+    var kt = /^[A-Z][a-zA-Z]+(\s[A-Z][a-zA-Z]+)*$/;
+    ten = $("#txtHoTen").val();
+
+    if(ten=="")
+    {
+        $("#loiTen").html("Bat buoc nhap!!");return false;
+    }
+
+    if(!kt.test(ten))
+    {
+        $("#loiTen").html("Nhap theo dung dinh dang yeu cau!!!");return false;
+    }
+    $("#loiTen").html("*"); return true;
+    }
+    $("#txtHoTen").blur(check_hoTen);
+
+//Số điện thoại không rỗng, nhập theo định dạng sau: XXX-YYYYYY, trong đó X, Y là các ký tự số.
+function check_sdt(){
+    var kt = /^\+?([0-9]{4})\)?[-.]?([0-9]{6})$/;
+    sdt = $("#txtSDT").val();
+
+    if(sdt=="")
+    {
+        $("#loiSDT").html("Bat buoc nhap!!");return false;
+    }
+
+    if(!kt.test(sdt))
+    {
+        $("#loiSDT").html("Nhap theo dung dinh dang XXXX-YYYYYY");return false;
+    }    
+    $("#loiSDT").html("*"); return true;
+    };
+    $("#txtSDT").blur(check_sdt);
+
+//Ngày sinh hợp lệ khi tuổi trên 15 và dưới 18
+function check_date(){
+
+    var date = $("txtDate").val();
+    return ~~((Date.now() - date) / (31557600000));
+// TODO Extra is:
+if (age >= 15)
+{
+   return true;
+}
+else
+{
+    alert('You are under 15');
+    return false
+}
+}
+$("#txtDate").blur(check_date);
+
+
+function isFileImage(file) {
+    const acceptedImageTypes = ['image/gif', 'image/jpeg', 'image/png'];
+    return file && $.inArray(file['type'], acceptedImageTypes)
+}
+
+$("#txtOPT").change(function() {
+                let loaiphong = $(this).val()
+                let giaphong = loaiphong == "K2" ? 5000000 : (loaiphong == "K4" ? 8000000 : 9000000)
+
+                $("#txtHP").val(giaphong)
+            })
+
+
+            
+            $("#btnSave").click(function(){
+                var ten = $("#txtHoTen").val();
+                var sdt = $("#txtSDT").val();
+                var date = $("#txtDate").val();
+                var dc = $("#txtDC").val();
+                var khoa = $("#txtOPT").val();
+                var hp = $("#txtHP").val();
+               
+                var them = "<tr><td>" + (i++) + "</td><td>" + ten + "</td><td>" + "" + "</td><td>" + sdt + "</td><td>" 
+                    + date + "</td><td>" + dc + "</td><td>" + khoa + "</td><td>" + hp + "</td></tr>";
+                
+                $("#myModal").modal("hide");
+                $("table tbody").append(them);
+            })
+
+
+})
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <img src="../Images/website.png" alt="" style="width: 100%;">
+        </div>
+        <div class="row">
+            <ul class="nav">
+                <li class="nav-link"><a href="#" class="nav-item">Trang Chu SYC</a></li>
+                <li class="nav-link"><a href="#" class="nav-item" data-toggle="modal" data-target="#myModal">Dang ky tham gia</a></li>
+            </ul>
+        </div>
+        <div class="row">
+            <h2>DANH SACH HOC VIEN DANG KY</h2></div>
+        
+        <div class="row">
+            <div class="col-12">
+                <table class="table">
+                <thead>
+                    <tr>
+                        <th>STT</th>
+                        <th>Ho va ten</th>
+                        <th>Gioi tinh</th>
+                        <th>So dien thoai</th>
+                        <th>Ngay sinh</th>
+                        <th>Dia Chi</th>
+                        <th>Khoa hoc</th>
+                        <th>Hoc phi</th>
+                    </tr>
+                    
+                </thead>
+
+                <tbody style="background-color: rgb(236, 232, 232);">
+                    <td>1</td>
+                    <td>Hoang Lam</td>
+                    <td>Nam</td>
+                    <td>090008888</td>
+                    <td>20/3/2010</td>
+                    <td>123 Nguyen Du</td>
+                    <td>6 Tuan</td>
+                    <td>8000000</td>
+                </tbody>
+            </table>
+            </div>
+        </div>
+            
+        
+
+        <div class="row">
+           <p>20066991_TruongQuangHuy_DHHTTT16B</p> 
+            
+        </div>
+
+        <div class="row">
+            <div class="modal" id="myModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3>THONG TIN HOC VIEN</h3>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+
+                        <div class="modal-body">
+                            <form action="">
+                                <div class="row">
+                                    <label for="lbTen" class="col-md-3">Ho va Ten: </label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" required id="txtHoTen">
+                                        <span class="text-danger" id="loiTen">*</span>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <label for="lbSDT" class="col-md-3">So dien thoai: </label>
+                                    <div class="col-md-9">
+                                        <input type="tel" class="form-control" required id="txtSDT" onblur="check_sdt();">
+                                        <span class="text-danger" id="loiSDT">*</span>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <label for="lbDate" class="col-md-3">Ngay sinh: </label>
+                                    <div class="col-md-9">
+                                        <input type="date" class="form-control" required id="txtDate">
+                                        <span class="text-danger" id="loiDate">*</span>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <label for="lbDC" class="col-md-3">Dia chi: </label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" id="txtDC">
+                                    
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <label for="txtOPT" class="col-md-3">Ban muon tham gia khoa nao? </label>
+                                    <div class="col-md-9">
+                                        <select id="txtOPT" class="form-control">
+                                            <option value="K2" selected>Khoa 2 tuan</option>
+                                            <option value="K4">Khoa 4 tuan</option>
+                                            <option value="K6">Khoa 6 tuan</option>
+                                            
+                                        </select>
+                                        
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <label for="lbHP" class="col-md-3">Hoc Phi: </label>
+                                    <div class="col-md-9">
+                                        <input type="" class="form-control" readonly id="txtHP">
+                                        
+                                    </div>
+                                </div>
+<br>
+                                <div class="row">
+                                    <label for="lbTen" class="col-md-3">Anh dai dien: </label>
+                                    <div class="col-md-9">
+                                        <input type="file" class="form-control" id="txtADD">
+                                        <span class="text-danger">*</span>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <button type="button" class="btn btn-success" id="btnSave" style="width: 100%;">Save</button>
+                                </div>
+
+
+
+
+                            </form>
+                            
+                        </div>
+
+                        <div class="modal-footer">
+                            <p>20066991_TruongQuangHuy_DHHTTT16B</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

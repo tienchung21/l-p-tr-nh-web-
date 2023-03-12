@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <title>Document</title>
+    <script>
+        $(document).ready(function(){
+            var i = 1;
+            $("#btnSave").click(function(){
+                var ten = $("#txtTen").val();
+                var sdt = $("#txtSDT").val();
+                var dc = $("#txtDC").val();
+
+                var them = "<tr><td>" + (i++) + "</td><td>" + ten + "</td><td>" + sdt + "</td><td>" + dc + "</td></tr>";
+                $("#myModal").modal("hide");
+                $("table tbody").append(them);
+            })
+
+        })
+    </script>
+</head>
+<body>
+    <div class="container">
+        <ul class="nav">
+            <li class="nav-item"><a href="#" class="nav-link"">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link" data-toggle="modal" data-target="#myModal">OPEN MODAL</a></li>
+        </ul>
+        
+        <div class="row">
+            <div class="col-12">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Ho ten</th>
+                            <th>SDT</th>
+                            <th>Dia chi</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <td>TQH</td>
+                        <td>123456789</td>
+                        <td>duong 23</td>
+                    </tbody>
+                </table>
+            </div>
+            
+        </div>
+
+        <div class="row">
+            <div class="modal" id="myModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3>FORM MODAL</h3>
+                        </div>
+
+                        <div class="modal-body">
+                            <form action="">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <label for="">Ho ten: </label>
+                                    </div>
+
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" placeholder="Nhap ten" required id="txtTen">
+                                        <span class="text-danger" id="loiTen">*</span>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <label for="">SDT: </label>
+                                    </div>
+
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" placeholder="Nhap SDT" required id="txtSDT">
+                                        <span class="text-danger" id="loiSDT">*</span>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <label for="">Nhap dia chi: </label>
+                                    </div>
+
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" placeholder="Nhap DC" required id="txtDC">
+                                        <span class="text-danger" id="loiDC">*</span>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <button type="button" class="btn btn-success" id="btnSave">Luu</button>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="modal-footer">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

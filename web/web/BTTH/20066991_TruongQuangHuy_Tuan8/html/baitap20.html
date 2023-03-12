@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <style>
+        *{
+            padding: 0;
+
+        }
+        header{
+            background-image: url(../img/header.PNG);
+            height: 200px;
+
+        }
+        nav{
+            height:40px;
+            background-color: aqua;
+
+        }
+        .wrapper{
+            width:80%;
+            background-color: blanchedalmond;
+            margin:auto;
+    
+    
+        
+
+        }
+
+    </style>
+    <script>
+        function dangky() {
+        var hoten = document.getElementById("txtHoten").value;
+        var lop=document.getElementById("optlop").value;
+        var mh=document.getElementById("optMonhoc").value;
+        var loai="Lý thuyết"
+        var loath=document.getElementById("rdth").checked;
+        if(loaith)
+            loai="Thực hành"
+        var row = "<tr><td>" +hoten+"</td><td>" +lop+"</td><td>" +mh+"</td><td>" +loai+"</td><td>"
+        var myTable = document.getElementsByTagName("tbody")[0]
+        var newRow = myTable.insertRow(myTable.rows.length)
+        newRow.innerHTML = row
+        return true
+        }
+
+    </script>
+    </head>
+    <body>
+
+    </body>
+    <div class="wrapper">
+        <header>
+
+        </header>
+        <nav>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                Open modal
+            </button>
+        </nav>
+    <div class="content">
+        <table width="100%">
+            <thead>
+                <tr>
+                    
+                    <th>Họ tên</th>
+                    <th>Lớp</th>
+                    <th>Môn học</th>
+                    <th>Loại</th>
+
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+    </div>
+    <!--Button to Open the Modal-->
+
+
+    <!--The Modal-->
+    <div class="modal" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+
+               <!--Modal Header-->
+               <div class="modal-header">
+                    <h4 class="Modal-title">Modal Heading</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+               </div>
+               <!--Modal body-->
+               <div class="modal-body">
+                    <form action="">
+                        <dic class="form-group">
+                            <label for="txtHoten" >Họ tên</label>
+                            <input type="text" id="txtHoten">
+
+                        </div>
+                        <div class=" form-group">
+                            <label for="">Lớp</label>
+                            <select name="optLop" id="optLop">
+                            <option value="DHKTPM16A">DHKTPM16A</option>
+                            <option value="DHKTPM16B">DHKTPM16B</option>
+                            <option value="DHKTPM16C">DHKTPM16C</option>
+                            <option value="DHKTPM16D">DHKTPM16D</option>
+                            <option value="DHKTPM16E">DHKTPM16E</option>
+                                
+                            </select>
+
+                        </div>
+                        <div class="form-group">
+                            <label for="">Môn học</label>
+                            <select name="optMonhoc" id="optMonhoc">
+                                <option value="LTHDT">Lập trình hướng đối tượng</option>
+                                <option value="Java">Lập trình Java</option>
+                                <option value="CNWeb">Công nghệ Web</option>
+                        </select>
+
+                                
+                                
+                        </div>
+                        <div class="form-group">
+                        <label for="">Loại</label>
+                        <input type="radio"name="radloai" id="rdlt" value="radlt" checked> Lý thuyết
+                        <input type="radio"name="radloai" id="rdth" value="radth"> Thực hành
+                         </div>
+                            <br>
+                                <button type="button" class="btn btn-primary" onclick="dangky()">Đăng ký</button>
+
+
+                    </form>
+               </div>
+               <!--Modal footer-->
+               <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+               </div>
+            
+            </div>
+        </div>
+    </div>
+
+
+            
+    
+
+</body>
+</html>
+
+

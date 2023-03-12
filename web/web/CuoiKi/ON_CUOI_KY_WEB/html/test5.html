@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <ul class="nav">
+                <li class="nav-item"><a href="#" class="nav-link">HOME</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">CELEBRATE</a></li>
+                <li class="nav-item"><a href="#" class="nav-link" data-toggle="modal" data-target="#myModal">Sign Up</a></li>
+            </ul>
+        </div>
+
+        <div class="row">
+            <table class="table">
+                <thead>
+                    <th>STT</th>
+                    <th>Name</th>
+                    <th>Tel</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Participant</th>
+                    <th>Party Type</th>
+                    <th>Room type</th>
+                    <th>Member</th>
+                    <th>Service</th>
+                    <th>Note</th>
+                </thead>
+
+                <tbody>
+                    
+                </tbody>
+            </table>
+        </div>
+
+        <div class="row">
+            <div class="modal" id="myModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3>MODAL FORM</h3>
+                            <button type="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        
+                        <div class="modal-body">
+                            <form action="">
+                                <div class="form-group">
+                                    <label for="lbTen">Họ tên người đặt: </label>
+                                    <span id="loiTen" class="text-danger">*</span><br>
+                                    <input type="text" id="txtTen" class="form-control" placeholder="Nhập vào họ tên" required>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="modal-footer"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

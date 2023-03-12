@@ -1,0 +1,143 @@
+header{
+    width: auto;
+    height: 250px;
+    background-color: #e1ebeb;
+    margin-top: -80px;
+}
+
+.head_view{
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    top: 20px;
+    left: 350px;
+    font-size: 18px;
+    width: 250px;
+    height: 37px;
+    background-color: #b8dcdc;
+    padding-top: 15px;
+}
+
+.input_search{
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    top: 5px;
+    right: 10px;
+    width: 220px;
+    height: 30px;
+}
+
+.menu{
+    position: absolute;
+    top: 66px;
+    left: 310px;
+    padding: 34px 40px;
+    font-size: 24px;
+    color: #1291d6;
+    letter-spacing: 2px;
+    
+    
+}
+
+a{
+    text-decoration: none;
+}
+
+.input_searchGoogle{
+    position: absolute;
+    top: 150px;
+    right: 20px;
+}
+
+.wrapper{
+    display: flex;
+    height: 600px;
+}
+
+aside{
+    flex-basis: 15%;
+    background-color: #e1ebeb;
+}
+
+hr{
+    width: 180px;
+}
+
+.tittle{
+    padding: 14px;
+    margin: 40px -8px;
+    font-size: 26px;
+    background-color: #ababa3;
+    filter: drop-shadow(8px 8px 10px rgb(125, 119, 119));
+
+}
+
+.para{
+    padding: 16px;
+    font-size: 18px;
+}
+
+section{
+    flex-basis: 65%;
+    
+}
+
+.details{
+    margin-top: -48px;
+    padding: 28px;
+    height: 100px;
+    background-color: yellow;
+    font-size: 24px;
+    width: 740px;
+    background-color: #b6e0e0;
+
+}
+
+.para_extend{
+    margin: 10px;
+}
+
+article{
+    padding: 90px;
+}
+
+.article_para{
+    padding: 90px;
+    margin-top: -196px;
+}
+
+p{
+    font-size: 20px;
+    background-color: #e1ebeb;
+    height: 396px;
+    padding: 28px;
+}
+
+
+
+.navbar{
+    flex-basis: 20%;
+}
+
+.skip{
+    text-align: right;
+}
+
+.paraInfor{
+    padding: 20px;
+    margin: 20px;
+    font-size: 22px;
+}
+
+.paraDifferent{
+    padding: 14px;
+    font-size: 26px;
+    background-color: rgb(205, 201, 201);
+    filter: drop-shadow(8px 8px 10px rgb(125, 119, 119));
+}
+
+.paraEnd{
+    font-size: 16pxpx;
+    padding: 14px;
+}

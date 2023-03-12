@@ -1,0 +1,52 @@
+
+
+.wrapper{
+    margin: auto;
+    width:75%;
+    height: auto;
+}
+
+
+
+ul{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    background-color: #1a2222;
+    padding: 18px 20px;
+    color: white
+}
+
+aside{
+    float: left;
+    width: 20%;
+}
+
+section{
+    float: left;
+    width: 80%;
+}
+
+.green{
+    
+    justify-content: space-between;
+    background-color: rgb(161, 113, 51);
+    
+
+}
+
+.para{
+    text-align: right;
+}
+
+p{
+    position: absolute;
+    top: 508px;
+    right: 158px;
+    font-size: 24px;
+    letter-spacing: 0.5px;
+    width: 550px;
+    text-align: left;
+    padding: 10px;
+    margin: 10px;
+}

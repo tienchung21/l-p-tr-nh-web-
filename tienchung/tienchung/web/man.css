@@ -1,0 +1,32 @@
+.wrapper {
+  width: 100%;
+}
+.header,
+.container,
+.nav,
+.content,
+.section,
+.footer {
+  background-color: bisque;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+.header {
+  height: 3rem;
+}
+.container {
+  display: flex;
+  height: 20rem;
+}
+.nav {
+  flex: 1;
+}
+.content {
+  flex: 2;
+}
+.section {
+  flex: 1;
+}
+.footer {
+  height: 3rem;
+}

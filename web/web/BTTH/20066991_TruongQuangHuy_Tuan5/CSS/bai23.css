@@ -1,0 +1,48 @@
+*{
+    margin: auto;
+    padding: 0;
+}
+
+.head{
+    height: 800px;
+    background-color: rgb(179 162 164);
+    text-align: center;
+    color: red;
+}
+
+.menu{
+    background-color: red;
+    width: 70%;
+    margin-top: 30px;
+}
+
+.menu ul li{
+    display: inline-table;
+    margin: 10px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+
+}
+
+.div{
+    width: 85%;
+    height: 500px;
+    background-color: rgb(78, 61, 61);
+}
+
+.head_sec {
+    margin-top: 50px;
+}
+
+.divsec{
+    margin-top: 50px;
+}
+
+.divsec ul li{
+    display: inline-table;
+    width: 160px;
+    font-size: 24px;
+    margin: 10px;
+
+}

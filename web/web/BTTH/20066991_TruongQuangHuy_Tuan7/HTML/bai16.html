@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="../CSS/bai16.css">
+    <script src="../js/jquery-3.6.1.min.js"> </script>
+    <script>
+        $(document).ready(
+            function() {
+            $("#userName").blur(function(){
+                var reg=/^[0-9]{9}$/;
+                if($("#userName").val()=="")
+                    alert("Username khong duoc rong");
+                else    
+                if(reg.test($("#userName").val())==false)
+                {
+                    alert("sai dinh dag")
+
+                }
+                else
+                alert("OK");
+            })
+        })
+        $(document).ready(
+            function() {
+            $("#Name").blur(function(){
+                var reg= /^[a-zA-Z0-9_-]{3,16}$/;
+                if($("#Name").val()=="")
+                    alert("Ten khong duoc rong");
+                else    
+                if(reg.test($("#Name").val())==false)
+                {
+                    alert("sai dinh dag")
+
+                }
+                else
+                alert("OK");
+            })
+        })
+        $(document).ready(
+            function() {
+            $("#password").blur(function(){
+                var reg=/^[0-9 a-z A-Z (!@#$%^&*.,]{6}$/;
+                if($("#password").val()=="")
+                    alert("password khong duoc rong");
+                else    
+                if(reg.test($("#password").val())==false)
+                {
+                    alert("sai dinh dag")
+
+                }
+                else
+                alert("OK");
+            })
+        })
+        $(document).ready(
+            function() {
+            $("#password").blur(function(){
+                var reg=/^[0-9 a-z A-Z (!@#$%^&*.,]{6}$/;
+                if($("#password").val()=="")
+                    alert("password khong duoc rong");
+                else    
+                if(reg.test($("#password").val())==false)
+                {
+                    alert("sai dinh dag")
+
+                }
+                else
+                alert("OK");
+            })
+        })
+    </script>
+   
+<script src="../js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header"><h2>Đăng ký tài khoản</h2></div>
+        <div class="info">
+            <div class="row">
+            <div class="col-md-4">
+                <div id="userNamelab" for="userName">Ten dang nhap:</div>
+            </div>
+            <div class="col-md-8">
+                <input type="text" id="userName" name="userName" placeholder="nhap vao ten dang nhap">
+            </div>
+            
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div id="passlab" for="password">Mat khau:</div>
+                </div>
+                <div class="col-md-8">
+                    <input type="text" id="password" name="password" placeholder="nhap vao mat khau">
+                </div>
+                
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div id="passagainlab" for="password">Nhap la mat khau:</div>
+                    </div>
+                    <div class="col-md-8">
+                        <input type="text" id="passagain" name="passagain" placeholder="nhap lai xac nhan mat khau">
+                    </div>
+                    
+                    <form action="">
+                        <h3>Thong tin ca nhan</h3>
+                        <div class="row">
+            <div class="col-md-4">
+                <div id="userNamelab" for="userName">Ho va ten</div>
+            </div>
+            <div class="col-md-8">
+                <input type="text" id="Name" name="userName" placeholder="nhap vao ho ten bat buoc nhap">
+            </div>
+            
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div id="userNamelab" for="userName">Ngay sinh</div>
+                </div>
+                <div class="col-md-8">
+                    <input type="Date" id="userName" name="userName" placeholder="nhap vao ho ten bat buoc nhap">
+                </div>
+                
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div id="userNamelab" for="userName">Gioi tinh</div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="gender-wrapper">
+                            <input type="radio" name="gender" value="male" checked> Male<br>
+                            <input  class="gender" type="radio" name="gender" value="female"> Female<br>
+                        </div>
+                        
+                    </div>
+                    
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div id="userNamelab" for="userName">Dien thoai</div>
+                        </div>
+                        <div class="col-md-8">
+                            <input type="text" id="userName" name="userName" placeholder="nhap vao so dien thoai">
+                        </div>
+                        
+                        </div>
+                        <div class="row">
+            <div class="col-md-4">
+                <div id="userNamelab" for="userName">Email</div>
+            </div>
+            <div class="col-md-8">
+                <input type="text" id="userName" name="userName" placeholder="nhap vao email ca nhan theo dinh dangten@tencongty.com">
+            </div>
+            
+            </div>
+
+                    </form>
+                    <div class="button">
+                        <button>Dang ky</button>
+                        <button>Huy</button>
+                    </div>
+                   
+                    </div>
+        </div>
+    </div>
+</body>
+</html>

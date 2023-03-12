@@ -1,0 +1,13 @@
+.container .row img{
+    width: 100%;
+}
+
+.container .row h1{
+    width: 100%;
+    text-align: center;
+}
+
+.container .row p{
+    width: 100%;
+    text-align: center;
+}

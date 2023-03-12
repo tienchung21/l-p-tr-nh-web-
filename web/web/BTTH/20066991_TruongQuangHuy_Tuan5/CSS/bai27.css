@@ -1,0 +1,92 @@
+*{
+    margin: auto;
+    padding: 0;
+}
+
+
+
+header{
+    height: 346px;
+    background-color: black;
+}
+
+nav ul li {
+    display: inline-table;
+    
+    
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    margin: 50px;
+    line-height: 50px;
+    
+}
+
+nav ul{
+    
+    text-align: center;
+    background-color: black;
+    
+}
+
+nav ul li:hover {
+    background-color: orange;
+}
+
+input{
+    margin-top: 30px;
+    width: 100%;
+}
+
+.head{
+    position: absolute;
+    top: 402px;
+    left: 110px;
+}
+
+.para3{
+    background-color: rgb(186, 197, 197);
+}
+
+section{
+    margin: 40px;
+}
+
+.magia{
+    height: 34px;
+    width: 10px;
+    background-color: rgb(186, 197, 197);
+    position: absolute;
+    left: 40px;
+}
+
+p{
+    margin-left: 20px;
+    margin-top: 6px;
+}
+
+.div2{
+    margin-top: 30px;
+}
+
+.div3{
+    margin-top: 30px;
+}
+
+.head_1{
+    position: absolute;
+    top: 740px;
+    left: 110px;
+}
+
+.head_2{
+    position: absolute;
+    top: 1052px;
+    left: 110px;
+}
+
+.khung ul li{
+    
+}
