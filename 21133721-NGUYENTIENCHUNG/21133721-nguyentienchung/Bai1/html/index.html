@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.6.4.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <title>Document</title>
+    <style>
+        [class*="col-"] {
+            padding: 0px;
+            border: 1px solid black;
+        }
+        
+        li {
+            width: 130px;
+            display: inline;
+        }
+    </style>
+    <script>
+        $(document).ready(function() {
+            $("#openMoDal").click(function() {
+                $("#openmodal").slideDown(2000);
+            });
+            $(".closemodal").click(function() {
+                $("#openmodal").fadeOut(500);
+            });
+            $(".dropdown").click(function() {
+                $(".dropdown-menu").fadeToggle();
+            });     
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="row col- col-md-12">
+            <div class="col-3 bg-info">
+                <img src="../img/images.png" alt="" srcset="" class="rounded-circle">
+            </div>
+            <div class="col-9 bg-info">
+                Text
+            </div>
+        </div>
+        <div class="row col- col-md-12">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a href="#" class="navbar-brand"><img src="../img/727-7279493_bootstrap-hd-png-download.png" alt=""></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item active btn-danger">
+                            <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled" href="#">Disabled</a>
+                            </li>
+                        <li>
+                            <a href="#" id="openMoDal" class="nav-link">Open Modal</a>
+                        </li>
+                    </ul>
+                    <form class="form-Inline my-2 my-lg-0">
+                        <input class="form-control-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-6" type="submit">Search</button>
+                    </form>
+                </div>
+            </nav>
+        </div>
+        <div class="row col- col-md-12">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>FirstName</th>
+                        <th>Lastname</th>
+                        <th>Email</th>
+                        <th>Comment</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1234</td>
+                        <td>Pham</td>
+                        <td>Huu Vinh</td>
+                        <td>vinh@gmail.com</td>
+                        <td>vinh@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td>1245</td>
+                        <td>Thanh</td>
+                        <td>Thao</td>
+                        <td>thao@gmail.com</td>
+                        <td>thao@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td>1276</td>
+                        <td>Trann</td>
+                        <td>Vu</td>
+                        <td>vug@gmail.com</td>
+                        <td>vug@gmail.com</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="modal mt-5" tabindex="-1" role="dialog" id="openmodal">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                   <div class="modal-header">
+                        <h4 class="modal-title">Modal title</h4>
+                        <button class="close closemodal" type="button" data-dismiss="modal" aria-label="Close" id="closemodal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        Modal body..
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary-danger closemodal" id="closemodal" type="button" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>        
+        </div>
+    </div>
+</body>
+
+</html>
+

@@ -46,6 +46,10 @@ function register(){
     var email = document.getElementById("re").value;
     var password = document.getElementById("rp").value;
     var passwordRetype = document.getElementById("rrp").value;
+    if(password!=passwordRetype){
+        alert("Password không trùng khớp!!");
+        return ;
+    }
 
     if (email == ""){
         alert("Email required.");

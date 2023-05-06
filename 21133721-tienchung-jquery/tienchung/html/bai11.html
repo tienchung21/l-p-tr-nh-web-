@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bai11.css">
+    <title>bai 11</title>
+</head>
+
+<body>
+
+    <form class="cmxform" id="form2" method="get" action="">
+        <fieldset>
+            <legend>Please provide your name, email address(won't be published) and a comment</legend>
+            <p>
+                <label for="name">Name (equired, at least 2 characters)</label>
+                <input id="name" name="name" required minlength="2">
+            </p>
+            <p>
+                <label for="email">E-Mail (required)</label>
+                <input id="email" name="email" required type="email">
+            </p>
+
+            <p>
+                <label for="URL">URL (optional)</label>
+                <input type="url" name="txtURL" id="txtURL">
+
+            </p>
+            <p>
+                <label for="comment">comment</label>
+                <input id="comment" name="comment" rangelength="[1,1000]">
+            </p>
+
+            <p>
+                <input class="submit" type="submit" value="Submit">
+
+            </p>
+        </fieldset>
+
+
+        <div class="container">
+            <ol>
+                <li>
+                    <label for="email" class="error">Please enter your email address</label>
+                </li>
+                <li>
+                    <label for="phone" class="error">Please enter your phone <b>number</b> (between 2
+       and 8 characters)</label>
+                </li>
+                <li>
+                    <label for="address" class="error">Please enter your address (at least 3
+       characters)</label>
+                </li>
+                <li>
+                    <label for="avatar" class="error">Please select an image (png, jpg, jpeg,
+       gif)</label>
+                </li>
+                <li>
+                    <label for="cv" class="error">Please select a document (doc, docx, txt,
+       pdf)</label>
+                </li>
+            </ol>
+        </div>
+
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+*{
+    margin: auto;
+    padding: auto;
+}
+.main{
+    height: 1000px;
+    width: 700px;
+    align-content: center;
+    background-color: antiquewhite;
+    text-align: center;
+    
+}

@@ -12,7 +12,7 @@
   <body>
     <header class="header-section">
       <a href="index.html"
-        ><img src="../img/logohn.png" alt="Logo" class="logo" style="width: 80px;height: 80px;"
+        ><img src="../img/logo-search-grid-1x.png" alt="Logo" class="logo" style="width: 80px;height: 80px;"
       /></a>
       <div>
         <ul class="navbar">
@@ -63,15 +63,15 @@
             >Họ tên</label
           >
           <br />
-          <input type="text" id="txtName" />
+          <input type="text" id="txtName" pattern="^(([A-Z])([a-z]{0,10})?)(\s([A-Z])([a-z]{0,10})?)?(\s([A-Z])([a-z]{0,10})?)?$" required/>
 
           <label for="txtEmail" class="contact__form-name">Email</label>
           <br />
-          <input type="text" id="txtEmail" />
+          <input type="text" id="txtEmail" pattern="^[a-z0-9\._-]+@[a-z0-9\._-]+\.[a-z]{2,6}$" required/>
 
           <label for="txtTel" class="contact__form-name">Số Điện Thoại</label>
           <br />
-          <input type="text" id="txtTel" />
+          <input type="text" id="txtTel" pattern="^0\d{9}$" required />
 
           <label for="txtHelp" class="contact__form-name"
             >Chúng tôi có thể giúp gì cho bạn?</label
@@ -87,17 +87,17 @@
       <footer class="footer-section">
         <div class="col first-col">
           
-          <h4 class="footer-heading">Huy Nam
+          <h4 class="footer-heading">Tiến chung
             <strong>VEST NAM</strong>
           </h4>
           <p class="footer-text">
             <strong>Address:</strong> 12 Nguyễn Văn Bảo, Phường 4, Quận Gò Vấp,
             TPHCM.
           </p>
-          <p class="footer-text"><strong>Phone:</strong> +(84) 789 698 980</p>
+          <p class="footer-text"><strong>Phone:</strong> +(84) 349195610</p>
           <p class="footer-text"><strong>Opening:</strong> 9:00-22:00, Mon-Sat</p>
           <p class="footer-text">
-            <strong>Copyright</strong> &copy; 2050 by HuyNam, Inc. All rights
+            <strong>Copyright</strong> &copy; 2050 by Tiến chung, Inc. All rights
             reserved.
           </p>
           <div class="follow">
@@ -117,15 +117,13 @@
         </div>
   <div class="col">
            <div class="col install">
-          <h4 class="footer-heading">HUY NAM TRÊN FACEBOOK</h4>
+          <h4 class="footer-heading">tiến chung TRÊN FACEBOOK</h4>
           
           <div class="footer-row">
-            <img src="../img/info/tqh.png" alt="" style="width: 242px; height: 40px;"/>
+            <img src="../img/avata.png" alt="" style="width: 242px; height: 40px;"/>
           </div>
   
-          <div class="footer-row">
-            <img src="../img/info/pn.png" alt="" style="width: 242px; height: 40px;"/>
-          </div>
+       
           
         </div>
         <div class="col">

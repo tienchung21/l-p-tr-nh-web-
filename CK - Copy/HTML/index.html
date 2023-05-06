@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal</title>
+    <link rel="stylesheet" href="../CSS/bootstrap.min.css">
+    <script src="../JS/jquery-3.6.1.min.js"></script>
+    <script src="../JS/bootstrap.min.js"></script>
+    <script src="../JS/check.js"></script>
+    <style>
+        .container .row img{width: 100%;}
+        .container .row p{text-align: center; width: 100%;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <img src="../Images/banner.jpg" alt="">
+        </div>
+        <div class="row">
+            <ul class="nav">
+                <li class="nav-item"><a class="nav-link" href="#">TRANG CHỦ</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">ĐOÀN THỂ</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">SỰ KIỆN</a></li>
+                <li class="nav-item"><a  class="nav-link" href="#" id="btnModal">ĐĂNG KÝ</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">THAM GIA</a></li>
+
+            </ul>         
+        </div>
+        <div class="row">
+            <div class="col-4"><img src="../Images/img.jpg" style="width: 300px;" alt=""></div>
+            <div class="col-8"></div>
+        </div>
+        <div class="row">
+            <h1>DANH SÁCH ĐĂNG KÝ HOẠT ĐỘNG MÙA HÈ XANH</h1>
+        </div>
+        <table class="table">
+            <thead>
+                <th scope="col">STT</th>
+                <th scope="col">Mã SV</th>
+                <th scope="col">Tên SV</th>
+                <th scope="col">Ngày tham gia</th>
+                <th scope="col">Email</th>
+                <th scope="col">Ảnh</th>
+            </thead>
+            <thead id="personList"></thead>
+        </table>
+        <button class="btn btn-info"></button>
+        <div class="row">
+            <div class="col-12" style="height: 50px;background-color: rgb(65, 65, 244);"></div>
+            
+        </div>
+        <div class="row">
+            <div class="modal fade" id="myModal" >
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header text-danger">
+                            <h2>THÔNG TIN ĐĂNG KÝ</h2>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <div id="form"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const formElement = document.getElementById('form');
+        formElement.innerHTML = `
+        <div class="form">        
+            <div class="row">
+                <div class="col-4 col-sm-5">
+                    <label for="lblTen">Mã sinh viên</label>
+                </div>
+                <div class="col-4 col-sm-7">
+                    <input type="text" name="txtTen" id="txtTen" class="form-control" placeholder="Nhập họ tên">
+                    <span class="text-danger" id="tbTen">*</span>
+                </div>
+            </div><br>
+            <div class="row">
+                <div class="col-4 col-sm-5">
+                    <label for="lblCMND">Họ tên</label>
+                </div>
+                <div class="col-4 col-sm-7">
+                    <input type="text" name="txtCMND" id="txtCMND" class="form-control" placeholder="Nhập SCMND cũ">
+                    <span class="text-danger" id="tbCMND">*</span>
+                </div>
+            </div><br>
+            <div class="row">
+                <div class="col-4 col-sm-5">
+                    <label for="lblQQ">Ngày tham gia</label>
+                </div>
+                <div class="col-4 col-sm-7">
+                    <input type="date" name="txtQQ" id="txtQQ" class="form-control" placeholder="Nhập tỉnh của bạn">
+                    <span class="text-danger" id="tbQQ">*</span>
+                </div>
+            </div><br>
+            <div class="row">
+                <div class="col-4 col-sm-5">
+                    <label for="lblEmail">Email</label>
+                </div>
+                <div class="col-4 col-sm-7">
+                    <input type="text" name="txtEmail" id="txtEmail" class="form-control" placeholder="Nhập Email của bạn">
+                    <span class="text-danger" id="tbEmail">*</span>
+                </div>
+            </div><br>
+            <div class="row">
+                <div class="col-4 col-sm-5">
+                    <label for="lblAnhDD">Ảnh thẻ</label>
+                </div>
+                <div class="col-4 col-sm-7">
+                    <input type="file" name="txtAnhDD" id="txtAnhDD" class="form-control">
+                    <!-- <span class="text-danger" id="tbAnhDD">*</span> -->
+                </div>
+            </div><br>
+            <div class="row">
+                <div class="col-12">
+                    <input type="submit" value="Lưu" id="btnSave" class="btn-danger" data-dismiss="modal" style="width:100%" onclick="addToLocal(txtTen.value, txtCMND.value, txtQQ.value, txtEmail.value, txtSDT.value, txtAnhDD.value)">
+                    <br>
+                    <span class="text-danger" id="thongbao"></span>
+                </div>          
+            </div>
+        </div>
+        </div>
+        `;      
+
+    </script>
+</body>
+</html>
